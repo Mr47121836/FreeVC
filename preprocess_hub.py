@@ -34,9 +34,9 @@ def process(filename, feature_extractor, model, device):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--sr", type=int, default=16000, help="sampling rate")
-    parser.add_argument("--in_dir", type=str, default="/data/AISHELL-3/AISHELL-3/train/wav_22k/", help="path to input dir")
-    parser.add_argument("--out_dir", type=str, default="dataset/hubert", help="path to output dir")
-    parser.add_argument("--model_dir", type=str, default="hubert/chinese-hubert-large-fairseq-ckpt", help="path to HuBERT model")
+    parser.add_argument("--in_dir", type=str, default="./dataset/aishell-16k", help="path to input dir")
+    parser.add_argument("--out_dir", type=str, default="dataset/hubert/", help="path to output dir")
+    parser.add_argument("--model_dir", type=str, default="HuERT/chinese-hubert-large-fairseq-ckpt", help="path to HuBERT model")
     args = parser.parse_args()
     
     os.makedirs(args.out_dir, exist_ok=True)

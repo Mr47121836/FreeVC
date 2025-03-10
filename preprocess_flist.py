@@ -31,21 +31,21 @@ if __name__ == "__main__":
     print("Writing", args.train_list)
     with open(args.train_list, "w") as f:
         for fname in tqdm(train):
-            speaker = fname[:4]
-            wavpath = os.path.join("DUMMY", speaker, fname)
+            speaker = fname[:7]
+            wavpath = os.path.join(args.source_dir, speaker, fname)
             f.write(wavpath + "\n")
         
     print("Writing", args.val_list)
     with open(args.val_list, "w") as f:
         for fname in tqdm(val):
-            speaker = fname[:4]
-            wavpath = os.path.join("DUMMY", speaker, fname)
+            speaker = fname[:7]
+            wavpath = os.path.join(args.source_dir, speaker, fname)
             f.write(wavpath + "\n")
             
     print("Writing", args.test_list)
     with open(args.test_list, "w") as f:
         for fname in tqdm(test):
-            speaker = fname[:4]
-            wavpath = os.path.join("DUMMY", speaker, fname)
+            speaker = fname[:7]
+            wavpath = os.path.join(args.source_dir, speaker, fname)
             f.write(wavpath + "\n")
             

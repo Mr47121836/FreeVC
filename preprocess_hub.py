@@ -55,6 +55,5 @@ if __name__ == "__main__":
 
     # 遍历所有 WAV 文件
     filenames = glob(f'{args.in_dir}/*/*.wav', recursive=True)
-    print(filenames)
     for filename in tqdm(filenames):
         process(filename, feature_extractor, cmodel, device)
